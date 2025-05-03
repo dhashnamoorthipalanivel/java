@@ -1,4 +1,5 @@
 package java.practiceTest;
+
 import java.util.*;
 
 class Properties {
@@ -47,20 +48,20 @@ class Properties {
 public class StudentInfo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         System.out.print("Enter Student ID: ");
         int id = sc.nextInt();
         sc.nextLine();
-        
+
         System.out.print("Enter Student Name: ");
         String name = sc.nextLine();
-        
+
         HashMap<String, Integer> marks = new HashMap<>();
-        
+
         System.out.print("Enter number of subjects: ");
         int subjects = sc.nextInt();
         sc.nextLine();
-        
+
         for (int i = 0; i < subjects; i++) {
             System.out.print("Enter subject name: ");
             String subject = sc.nextLine();
@@ -69,7 +70,7 @@ public class StudentInfo {
             sc.nextLine(); // consume newline
             marks.put(subject, mark);
         }
-        
+
         Properties student = new Properties(id, name, marks);
         student.printStudentInfo();
         student.checkStudentPassOrFail();
@@ -78,4 +79,3 @@ public class StudentInfo {
         sc.close();
     }
 }
-
