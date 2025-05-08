@@ -18,20 +18,19 @@ class singleLinkedList {
     Node head;
     Node current;
 
-    // Insert at End
-    void insertNodeAtEnd(int data) {
-        Node newNode = new Node(data);
-
-        if (head == null) {
-            head = newNode;
-            current = newNode;
-        } else {
-            while (current.next != null) {
-                current = current.next;
-            }
-            current.next = newNode;
-        }
-    }
+    //	Insert at Begin 
+	void insertNodeAtBegininning(int data) {
+		Node newNode = new Node(data);
+		
+		if(head == null) {
+			head = newNode;
+			current = newNode;
+		}else {
+			newNode.next = head;
+			head = newNode;
+			current = newNode;
+		}
+	}
 
     // Display
     void display() {
@@ -55,7 +54,7 @@ public class LinkedList2 {
             if (n == -1) {
                 break;
             } else {
-                sll.insertNodeAtEnd(n);
+                sll.insertNodeAtBegininning(n);
             }
         }
 
